@@ -45,8 +45,8 @@ So the rules are: the main conversation stays on one model and plans. Cheap mode
 | Path | What it is |
 |---|---|
 | [`CLAUDE.md`](CLAUDE.md) | My global instructions (`~/.claude/CLAUDE.md`). Sets the conductor rules the skills assume. |
-| [`swarm/`](swarm/SKILL.md) | Router table, launch rules, prompt template, large-task playbook. Also [`agents.md`](swarm/agents.md) (how to write an agent definition) and [`scoreboard.md`](swarm/scoreboard.md). |
-| [`council/`](council/SKILL.md) | Triage, decision council, hill-climb loop, agreement vote, quorum. Also [`hill-climb.md`](council/hill-climb.md), [`weighted-execution.md`](council/weighted-execution.md) and `scripts/` (Node, 70 tests). |
+| [`swarm/`](swarm/SKILL.md) | Router table, launch rules, prompt template, large-task playbook. Also [`conducting.md`](swarm/conducting.md) (running workstreams as threads), [`agents.md`](swarm/agents.md) (how to write an agent definition), [`scoreboard.md`](swarm/scoreboard.md) and [`scoreboard-archive.md`](swarm/scoreboard-archive.md). |
+| [`council/`](council/SKILL.md) | Triage, decision council, hill-climb loop, agreement vote, quorum. Also [`hill-climb.md`](council/hill-climb.md), [`cold-reader.md`](council/cold-reader.md) (does an outsider understand this?), [`weighted-execution.md`](council/weighted-execution.md) and `scripts/` (Node, 70 tests). |
 
 ### Methods swarm routes to
 
@@ -62,13 +62,13 @@ So the rules are: the main conversation stays on one model and plans. Cheap mode
 
 | Path | What it is |
 |---|---|
-| [`curation/`](curation/SKILL.md) | A paid jury for images, audio and video. It picks between 2–4 versions of an asset, scores an asset during a hill climb, and generates new candidates. Jurors are weighted by a benchmark for that media type. Includes `data/` (juries, generators, scores, the research behind each benchmark choice) and `scripts/` (Node, 109 tests; imports `../council/scripts`). |
+| [`curation/`](curation/SKILL.md) | A paid jury for images, audio and video. It picks between 2–4 versions of an asset, scores an asset during a hill climb, and generates new candidates ([`generation.md`](curation/generation.md)). Jurors are weighted by a benchmark for that media type. Includes `data/` (juries, generators, scores, the research behind each benchmark choice) and `scripts/` (Node, 109 tests; imports `../council/scripts`). |
 
 ### Agents and hook
 
 | Path | What it is |
 |---|---|
-| [`agents/`](agents) | The five worker definitions swarm launches: `scout`, `researcher`, `auditor`, `implementer`, `reviewer`. |
+| [`agents/`](agents) | The six worker definitions swarm launches: `scout`, `researcher`, `auditor`, `implementer`, `reviewer`, and `svg-artist` (Fable 5.2, for every SVG edit). |
 | [`hooks/telemetria.mjs`](hooks/telemetria.mjs) | A `SubagentStop` hook that logs model, effort and tokens for every subagent. |
 
 ### Support skills
@@ -87,7 +87,7 @@ So the rules are: the main conversation stays on one model and plans. Cheap mode
 ## Using it
 
 1. Copy the skill folders into `~/.claude/skills/` and the files in `agents/` into `~/.claude/agents/`.
-2. Merge the sections you want from `CLAUDE.md` into your own `~/.claude/CLAUDE.md`. Do not replace the whole file. It sets what the skills assume: Opus at medium effort as the conductor, one task per session, and `/council` instead of asking the owner when a choice has 2–4 options and no oracle can decide it.
+2. Merge the sections you want from `CLAUDE.md` into your own `~/.claude/CLAUDE.md`. Do not replace the whole file. It sets what the skills assume: Fable 5.2 as the general conductor and Opus 5.5 on each workstream, both at medium effort, one task per session, and `/council` instead of asking the owner when a choice has 2–4 options and no oracle can decide it.
 3. Restart Claude Code.
 
 What each part needs:
@@ -117,6 +117,7 @@ The originals are in Portuguese. How much checking each English file got:
 | Files | Check | Result |
 |---|---|---|
 | `swarm`, `council`, `CLAUDE.md`, this README | Translated, then hill-climbed by the council itself for 3 rounds | Weighted means of 8.17 to 8.53 out of 10. The target was 9, and no piece reached it. |
+| Sync to the current skills (2026-11-11) | Translated against the current Portuguese source, no council round | Fable 5.2 as conductor and SVG owner, new router types 17–18, new files (`conducting`, `cold-reader`, `generation`, `svg-artist`), curation and telemetry price updates. Tests pass; numbers match the source. |
 | Later sync of those files (2026-11-09) | Translated, no council round | New scoreboard lines, one `CLAUDE.md` passage about thread ids, optional parameters in four scripts. |
 | Method skills, `curation`, support skills, hook | Translated and compared with the source by the conductor | Tests pass where there are scripts, and the numbers in each file match the source. Not scored by the council. |
 
@@ -136,4 +137,4 @@ The last measured weighted means:
 
 The fixes the panel approved in the last round were applied after that measurement and were not scored again. This README was reorganized after its score was measured.
 
-Built on Windows 11 with Claude Code (Opus 5.5 conductor; Haiku 5.5, Sonnet 5.5 and Opus 5.5 workers, chosen by the swarm table).
+Built on Windows 11 with Claude Code (Fable 5.2 and Opus 5.5 conductors; Haiku 5.5, Sonnet 5.5 and Opus 5.5 workers, chosen by the swarm table).

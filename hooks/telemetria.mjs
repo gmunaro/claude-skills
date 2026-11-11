@@ -127,14 +127,15 @@ async function hook() {
   if (r.turnos) appendFileSync(SAIDA, JSON.stringify(r) + "\n");
 }
 
-// US$ per million tokens, first-party API (claude-api skill, table of 2026-10-06).
+// US$ per million tokens, first-party API (claude-api skill, table of 2026-11-03).
 // Estimates: Haiku cache read = 0.1x input; cache write (5 min) = 1.25x input on all models.
 // On the Max plan this is not a bill: it is for comparing how much each model weighs on the limit.
 const PRECOS = {
   "claude-haiku-5-5": { e: 0.1, s: 0.5, cl: 0.01 },
-  "claude-sonnet-5-5": { e: 2, s: 10, cl: 0.2 },
+  "claude-sonnet-5-5": { e: 2, s: 10, cl: 0.1 },
   "claude-opus-5-5": { e: 4, s: 20, cl: 0.2 },
   "claude-fable-5-1": { e: 10, s: 50, cl: 0.25 },
+  "claude-fable-5-2": { e: 8, s: 40, cl: 0.2 },
 };
 const custo = (r) => {
   const p = PRECOS[r.modelo];

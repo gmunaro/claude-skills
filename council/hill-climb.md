@@ -59,12 +59,13 @@ The juror judges only what is in the packet. A claim without proof becomes a bet
 5. **Private controls**: the packet shows the structure (which controls exist and what they measure), never the values.
 6. **Consistency lint** of the artifact before generating the packet: fields that contradict each other, stale numbers, removed names, and references to fields that do not exist. A packet that fails lint does not go out.
 7. **Cheap dry run**: a Haiku evaluates the packet before the round. If it points to material that is missing or ambiguous in the packet, rather than in the artifact, fix the packet and repeat. The dry run does not enter the aggregation.
+8. **A packet that fits the juror.** With packets of about 300 thousand characters, the Haikus failed on context in 5 of 5 rounds. Send only the part being judged, or take the Haikus out of the lineup before freezing.
 
 Each category gets a numeric score from 1 to 10. The scale uses neutral anchors, for example 1 = does not meet the contract, 5 = partly meets the contract, 10 = best solution supported by the available material. `gap` is a non-empty string; when nothing prevents a higher score, use score 10 and the literal text `nothing`. Do not alter old answers to fit the format. A format repair is another identified attempt, with a fixed limit and no duplicate vote.
 
 Critiques cite an excerpt, line or piece of evidence and propose a fix. Before any fix, the consolidated list goes to the agreement vote described in SKILL.md, and only the items with a weighted average of 7 to 10 go forward. The conductor tests or checks each approved item and classifies it as: demonstrated defect, hypothesis to test, well-grounded false positive, or out-of-scope suggestion. A rejected critique keeps its review and score in the history. Do not "fix" the contract to accommodate a false suggestion.
 
-Jurors may also propose features, improvements and workflows. Mark the type and whether each item is mandatory. Optional proposals state the expected benefit, the evidence and a possible test, without pretending the gain was measured. They count in the table, but their absence does not lower the conformity score of the current artifact. If they require a new goal, new resources or a new acceptance criterion, treat the definition as a different artifact, approve its protocol, and only then execute. Do not fold a new requirement into the middle of a comparison without versioning and re-evaluating both pieces.
+Jurors may also propose features, improvements and workflows. Mark the type and whether each item is mandatory. Optional proposals state the expected benefit, the evidence, the relevant cost or risk and a possible test, without pretending the gain was measured. They count in the table, but their absence does not lower the conformity score of the current artifact. If they require a new goal, new resources or a new acceptance criterion, treat the definition as a different artifact, approve its protocol, and only then execute. Do not fold a new requirement into the middle of a comparison without versioning and re-evaluating both pieces, and do not grow the scope to keep the loop open.
 
 Whoever revises the artifact returns one response per verified problem: change made and proof; not applicable with evidence; or pending with a reason. After fixing, run the checks and use new jurors on the updated packet, without the score history. Availability may change; keep the record and the paired comparison.
 
@@ -74,19 +75,19 @@ Freeze the lineup (the model/effort pairs that will review) and the controls bef
 
 Without the quorum and coverage fixed in the protocol, the state is `BLOCKED`, even if every answer received is high. Do not change the criterion after seeing a score or a quota. If a later round brings a new protocol or inventory, record the change, keep all earlier failures, and recompute the comparison over the common pairs, without hiding the total coverage.
 
-By default the problem gets up to five rounds. Also stop when you reach limits on time, tokens, cost or attempts. Do not keep running until you get the first favorable combination. Do not immediately repeat a call that reported a cooldown.
+The problem gets up to three rounds, not counting the baseline (owner's cap, 2026-11-09, for any loop). Also stop when you reach limits on time, tokens, cost or attempts. Do not keep running until you get the first favorable combination. Do not immediately repeat a call that reported a cooldown.
 
-## Progress checkpoint and the goal as north star
+## Progress checkpoint and acceptance
 
-Every two rounds of a level, or three if that is fixed before the first round of that level, compare with the previous checkpoint:
+After round 2 of a level, compare with the previous round:
 
-- paired weighted average, over the same valid pairs;
+- the blind-decision result of the new version against the previous one, over the same valid pairs;
 - number of demonstrated mandatory defects still pending;
 - result of the oracles.
 
-There is progress when the average rises by at least the minimum fixed in the protocol, or when mandatory defects drop, with no oracle regression. With no progress, with regression, or with insufficient evidence, pause the stalled part (one category or one component) or the whole loop. Re-evaluate the method, the constraints and the feasibility of the goal, and record the decision before resuming. Resuming with no recorded change repeats the same round.
+There is progress when the new version wins the blind decision, or when mandatory defects drop, with no oracle regression. With no progress, with regression, or with insufficient evidence, pause the stalled part (one category or one component) or the whole loop. Re-evaluate the method and the constraints, and record the decision before round 3. Resuming with no recorded change repeats the same round.
 
-The approval thresholds are the quality north star. A goal such as 9 or 10 may be impossible with the available material. Ending below it, with the best measured result, the gaps and the reasons, is `CLOSED_BELOW_TARGET`. That state is not `APPROVED` and does not authorize installing the version as approved.
+The absolute score is not an approval threshold (SKILL.md, section 5). Closing at the cap without beating the baseline, or below a score target the user fixed, is `CLOSED_BELOW_TARGET`, with the best measured result, the gaps and the reasons. That state is not `APPROVED` and does not authorize installing the version as approved.
 
 ## Minimum artifacts
 

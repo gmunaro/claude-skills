@@ -1,6 +1,6 @@
 ---
 name: ladder
-description: Effort ladder. The task starts at the cheapest step that has a real chance of passing, and an oracle says to move up one step at a time (Haiku medium, Haiku high, Sonnet high, Opus high, conductor). Use when the task has an oracle and the difficulty is uncertain, when a batch of similar tasks can almost all pass at the cheap step, when a worker failed, and when the user runs /ladder.
+description: Effort ladder. The task starts at the cheapest step that has a real chance of passing, and an oracle says to move up one step at a time (Haiku medium, Haiku high, Sonnet high, Opus high, Fable high, conductor). Use when the task has an oracle and the difficulty is uncertain, when a batch of similar tasks can almost all pass at the cheap step, when a worker failed, and when the user runs /ladder.
 ---
 
 # Ladder
@@ -15,7 +15,8 @@ Each step exists only because the one below it failed the oracle. The `/ladder` 
 | 2 | Haiku high |
 | 3 | Sonnet high |
 | 4 | Opus high, with a short scope and the packet ready |
-| 5 | The conductor does it directly |
+| 5 | Fable high, with a short scope and the packet ready |
+| 6 | The conductor does it directly |
 
 The starting step comes from the `swarm` table: medium implementation starts at 3, hard at 4. `xhigh` only for a long unattended task; `max` only when the owner asks for it (ceilings in `swarm`).
 
@@ -28,7 +29,7 @@ The starting step comes from the `swarm` table: medium implementation starts at 
    - fix the prompt and relaunch at the same step;
    - raise the effort within the same model (step 1 to 2);
    - split the task;
-   - move up a model (step 3, then 4);
+   - move up a model (step 3, then 4, then 5);
    - the conductor does it directly.
 
    On each relaunch, the new agent gets the same packet plus the last ~30 lines of the failed output, not the diff or the reasoning of the one that failed.

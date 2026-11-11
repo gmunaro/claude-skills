@@ -31,9 +31,9 @@ export const CATEGORIES = ['image', 'audio', 'video']
 export const DATA = path.join(HERE, '..', 'data')
 const OPENROUTER = 'https://openrouter.ai/api/v1'
 const PROXY = 'http://127.0.0.1:8317/v1'
-/** Current Claude models with vision (gmunaro's request, 2026-11-07): all of them join the image jury. OpenRouter id -> proxy id. */
+/** Current Claude models with vision (gmunaro's request, 2026-11-07; Fable 5.1 replaced by 5.2 on 2026-11-10): all of them join the image jury. OpenRouter id -> proxy id. */
 export const CURRENT_CLAUDE = {
-  'anthropic/claude-fable-5.1': 'claude-fable-5-1',
+  'anthropic/claude-fable-5.2': 'claude-fable-5-2',
   'anthropic/claude-opus-5.5': 'claude-opus-5-5',
   'anthropic/claude-sonnet-5.5': 'claude-sonnet-5-5',
   'anthropic/claude-haiku-5.5': 'claude-haiku-5-5',

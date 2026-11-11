@@ -14,12 +14,6 @@
    "note": "Arena rated Opus 5.5 (High); curation runs medium"
   },
   {
-   "model": "anthropic/claude-fable-5.1",
-   "value": 1288,
-   "source": "https://arena.ai/leaderboard/vision",
-   "note": "Arena rated Fable 5.1 (Max); curation runs medium"
-  },
-  {
    "model": "anthropic/claude-sonnet-5.5",
    "value": 1261,
    "source": "https://arena.ai/leaderboard/vision",
@@ -84,6 +78,7 @@
   "Gemini 3 Flash (two names on Arena for one id)"
  ],
  "no_score": [
+  "anthropic/claude-fable-5.2: no row on Arena Vision on 2026-11-10 (Arena only lists Fable 5, 1309, and Fable 5.1 Max, 1289); the 5.1 score does not transfer; votes with floor weight until Arena publishes",
   "anthropic/claude-haiku-5.5: no published row on Arena Vision or MMMU-Pro (Vals/AA) on 2026-11-07; votes with floor weight"
  ]
 }

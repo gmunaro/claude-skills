@@ -12,7 +12,7 @@ A new agent is worth it when the same briefing has already repeated, or will rep
 ---
 name: short-name
 description: <what it does> (<model>). Use for <trigger 1>, <trigger 2>. <what it never does>.
-model: haiku            # explicit (haiku, sonnet or opus, per the router table), so it does not inherit the session's model
+model: haiku            # explicit (haiku, sonnet, opus or fable, per the router table), so it does not inherit the session's model
 effort: medium         # explicit; the router passes another at launch when the task calls for it; never max
 tools: Read, Grep, Glob, Bash   # allowlist; if omitted, inherits everything
 isolation: worktree     # only for agents that edit code in parallel

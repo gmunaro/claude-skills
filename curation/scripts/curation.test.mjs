@@ -36,7 +36,7 @@ test('buildJury seats every current Claude and fills up from the benchmark, reco
   assert.equal(s.jury.find((m) => m.model === 'x/one').effort, 'medium')
   assert.ok(s.shortfalls.some((f) => f.model === 'x/audio'))
   assert.ok(s.shortfalls.some((f) => /only 6 models/.test(f.reason)))
-  assert.equal(s.jury[0].proxy, 'claude-fable-5-1')
+  assert.equal(s.jury[0].proxy, 'claude-fable-5-2')
 })
 
 test('published weight requires the scale of the category benchmark', () => {

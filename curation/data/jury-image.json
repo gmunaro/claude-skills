@@ -1,6 +1,6 @@
 {
  "category": "image",
- "built_at": "2026-11-08T01:07:47.547Z",
+ "built_at": "2026-11-10T05:59:08.517Z",
  "benchmark": {
   "name": "Arena Vision",
   "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
@@ -10,33 +10,26 @@
  },
  "catalog": {
   "source": "https://openrouter.ai/api/v1/models",
-  "queried_at": "2026-11-08T01:07:47.547Z"
+  "queried_at": "2026-11-10T05:59:08.517Z"
  },
  "effort": "medium",
  "jury": [
   {
-   "model": "anthropic/claude-fable-5.1",
-   "name": "Anthropic: Claude Fable 5.1",
+   "model": "anthropic/claude-fable-5.2",
+   "name": "Anthropic: Claude Fable 5.2",
    "origin": "current_claude",
-   "proxy": "claude-fable-5-1",
+   "proxy": "claude-fable-5-2",
    "effort": "medium",
    "effort_note": "medium requested (reasoning.effort)",
    "price": {
-    "prompt": 0.00001,
-    "completion": 0.00005,
+    "prompt": 0.000008,
+    "completion": 0.00004,
     "web_search": 0.01,
-    "input_cache_read": 2.5e-7,
-    "input_cache_write": 0.0000125,
-    "input_cache_write_1h": 0.00002
+    "input_cache_read": 2e-7,
+    "input_cache_write": 0.00001,
+    "input_cache_write_1h": 0.000016
    },
-   "index": {
-    "value": 1288,
-    "scale": "Arena Vision",
-    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
-    "source": "https://arena.ai/leaderboard/vision",
-    "queried_at": "2026-11-07T00:00:00Z",
-    "note": "Arena rated Fable 5.1 (Max); curation runs medium"
-   },
+   "index": null,
    "secondary": null
   },
   {
@@ -236,5 +229,14 @@
    "secondary": null
   }
  ],
- "shortfalls": []
+ "shortfalls": [],
+ "excluded_by_identity": [
+  "Qwen3.8-Max 1300 (qwen/qwen3.8-max-0902 or -prime: identity not proven)",
+  "Muse Spark without version 1294",
+  "Gemini 3 Flash (two names on Arena for one id)"
+ ],
+ "no_score": [
+  "anthropic/claude-fable-5.2: no row on Arena Vision on 2026-11-10 (Arena only lists Fable 5, 1309, and Fable 5.1 Max, 1289); the 5.1 score does not transfer; votes with floor weight until Arena publishes",
+  "anthropic/claude-haiku-5.5: no published row on Arena Vision or MMMU-Pro (Vals/AA) on 2026-11-07; votes with floor weight"
+ ]
 }
