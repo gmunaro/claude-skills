@@ -1,0 +1,92 @@
+{
+ "category": "video",
+ "state": "ok",
+ "reason": null,
+ "built_at": "2026-11-08T03:57:06.151Z",
+ "catalog": {
+  "source": "https://openrouter.ai/api/v1/models",
+  "queried_at": "2026-11-08T03:57:06.151Z"
+ },
+ "benchmark": {
+  "name": "Artificial Analysis Video Arena, text-to-video with audio",
+  "version": "AA-Video-T2V v2.1",
+  "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video (raw HTML downloaded with curl; scores checked in the HTML for the key names)",
+  "queried_at": "2026-11-07"
+ },
+ "identity_checked": {
+  "checked": true,
+  "source": "benchmark name compared to the name from /models?output_modalities=all (live catalog)",
+  "date": "2026-11-08"
+ },
+ "top": [
+  {
+   "model": "alibaba/wan-3.0",
+   "name": "Wan 3.0",
+   "position": 1,
+   "score": 1172,
+   "benchmark": "Artificial Analysis Video Arena, text-to-video with audio",
+   "benchmark_version": "AA-Video-T2V v2.1",
+   "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video (linha 'Wan 3.0', 1172 ±13); listagem https://openrouter.ai/api/v1/videos/models",
+   "date": "2026-11-07",
+   "price": {
+    "unit": "second",
+    "usd": 0.1,
+    "origin": "ranking: per-second SKU from /videos/models",
+    "detail": "SKU duration_seconds_720p = 0.10 USD/s, from the /api/v1/videos/models listing. I did not use the collection price from the model page.",
+    "resolution": "720p",
+    "by_resolution": {
+     "720p": 0.1,
+     "480p": 0.05,
+     "1080p": 0.2
+    }
+   },
+   "limits": [],
+   "capabilities": {
+    "accepts_reference": false,
+    "accepts_first_frame": true,
+    "generates_audio": true
+   },
+   "note": "First with audio on AA (1172). Identity: 'Wan 3.0' = alibaba/wan-3.0, not alibaba/wan-3.0-prime. Reference does not appear as a field in the listing [unverified]. Arena image-to-video 'Wan 3.0' 1481 and text-to-video 1477, via WebFetch only."
+  },
+  {
+   "model": "heygen/heygen-video-1",
+   "name": "HeyGen Video 1",
+   "position": 3,
+   "score": 1152,
+   "benchmark": "Artificial Analysis Video Arena, text-to-video with audio",
+   "benchmark_version": "AA-Video-T2V v2.1",
+   "source": "https://artificialanalysis.ai/video/leaderboard/text-to-video (linha 'HeyGen Video 1', 1152); listagem https://openrouter.ai/api/v1/videos/models",
+   "date": "2026-11-07",
+   "price": {
+    "unit": "second",
+    "usd": 0.1,
+    "origin": "ranking: per-second SKU from /videos/models",
+    "detail": "SKU duration_seconds_1080p = 0.10 USD/s. The collection page shows a lower discounted price, not used here.",
+    "resolution": "1080p",
+    "by_resolution": {
+     "1080p": 0.1,
+     "480p": 0.02,
+     "768p": 0.036,
+     "2K": 0.1
+    }
+   },
+   "limits": [],
+   "capabilities": {
+    "accepts_reference": true,
+    "accepts_first_frame": true,
+    "generates_audio": false
+   },
+   "note": "The listing marks generates_audio false, but AA included the model on the board with audio. Conflict unresolved [unverified]. Has a reference-images SKU (reference_input_images 0.04). AA cites $2.40/min, which differs from the SKU: I used the SKU."
+  }
+ ],
+ "entered": [],
+ "left": [],
+ "absent_from_catalog": [],
+ "no_estimate": [
+  {
+   "model": "bytedance/seedance-2.5",
+   "position": 2,
+   "reason": "no price per second convertible to USD: No formula: the SKU is tokens only (video_tokens 0.0000107 USD/token). The page https://openrouter.ai/bytedance/seedance-2.0 documents neither tokens per second nor the conversion by resolution. So $/s stays null."
+  }
+ ]
+}

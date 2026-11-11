@@ -1,0 +1,240 @@
+{
+ "category": "image",
+ "built_at": "2026-11-08T01:07:47.547Z",
+ "benchmark": {
+  "name": "Arena Vision",
+  "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+  "source": "https://arena.ai/leaderboard/vision",
+  "queried_at": "2026-11-07T00:00:00Z",
+  "reason": "Only vision benchmark that measures judgment: people vote on pairs of answers about images; primary source updated on 2026-11-06. MMMU-Pro (official one stalled in 09/2025, Vals archived in 09/2026, test answer key released in 02/2026) stays as a secondary record. Research: C:/tmp/curadoria/pesquisa-image.md."
+ },
+ "catalog": {
+  "source": "https://openrouter.ai/api/v1/models",
+  "queried_at": "2026-11-08T01:07:47.547Z"
+ },
+ "effort": "medium",
+ "jury": [
+  {
+   "model": "anthropic/claude-fable-5.1",
+   "name": "Anthropic: Claude Fable 5.1",
+   "origin": "current_claude",
+   "proxy": "claude-fable-5-1",
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.00001,
+    "completion": 0.00005,
+    "web_search": 0.01,
+    "input_cache_read": 2.5e-7,
+    "input_cache_write": 0.0000125,
+    "input_cache_write_1h": 0.00002
+   },
+   "index": {
+    "value": 1288,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena rated Fable 5.1 (Max); curation runs medium"
+   },
+   "secondary": null
+  },
+  {
+   "model": "anthropic/claude-opus-5.5",
+   "name": "Anthropic: Claude Opus 5.5",
+   "origin": "current_claude",
+   "proxy": "claude-opus-5-5",
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.000004,
+    "completion": 0.00002,
+    "web_search": 0.01,
+    "input_cache_read": 2e-7,
+    "input_cache_write": 0.000005,
+    "input_cache_write_1h": 0.000008
+   },
+   "index": {
+    "value": 1296,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena rated Opus 5.5 (High); curation runs medium"
+   },
+   "secondary": null
+  },
+  {
+   "model": "anthropic/claude-sonnet-5.5",
+   "name": "Anthropic: Claude Sonnet 5.5",
+   "origin": "current_claude",
+   "proxy": "claude-sonnet-5-5",
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.000002,
+    "completion": 0.00001,
+    "web_search": 0.01,
+    "input_cache_read": 1e-7,
+    "input_cache_write": 0.0000025,
+    "input_cache_write_1h": 0.000004
+   },
+   "index": {
+    "value": 1261,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena rated Sonnet 5.5 (xHigh); curation runs medium"
+   },
+   "secondary": null
+  },
+  {
+   "model": "anthropic/claude-haiku-5.5",
+   "name": "Anthropic: Claude Haiku 5.5",
+   "origin": "current_claude",
+   "proxy": "claude-haiku-5-5",
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 1e-7,
+    "completion": 5e-7,
+    "web_search": 0.01,
+    "input_cache_read": 1e-8,
+    "input_cache_write": 1.25e-7,
+    "input_cache_write_1h": 2e-7,
+    "overrides": 0
+   },
+   "index": null,
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-3.7-flash",
+   "name": "Google: Gemini 3.7 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 7.5e-7,
+    "completion": 0.00000375,
+    "image": 7.5e-7,
+    "audio": 7.5e-7,
+    "input_audio_cache": 7.5e-8,
+    "web_search": 0.014,
+    "internal_reasoning": 0.00000375,
+    "input_cache_read": 7.5e-8,
+    "input_cache_write": 4.16666666666667e-8
+   },
+   "index": {
+    "value": 1294,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena: Gemini 3.7 Flash (High), Preliminary"
+   },
+   "secondary": null
+  },
+  {
+   "model": "openai/gpt-6.1-sol",
+   "name": "OpenAI: GPT-6.1 Sol",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.000002,
+    "completion": 0.00001,
+    "web_search": 0.01,
+    "input_cache_read": 1e-7,
+    "input_cache_write": 0.0000025,
+    "overrides": 0
+   },
+   "index": {
+    "value": 1293,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena: GPT-6.1 Sol (Max)"
+   },
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "name": "Google: Gemini 3.8 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 8.25e-7,
+    "completion": 0.000004125,
+    "image": 8.25e-7,
+    "audio": 8.25e-7,
+    "input_audio_cache": 8.25e-8,
+    "web_search": 0.014,
+    "internal_reasoning": 0.000004125,
+    "input_cache_read": 8.25e-8,
+    "input_cache_write": 4.16666666666667e-8
+   },
+   "index": {
+    "value": 1293,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena: Gemini 3.8 Flash (High), Preliminary"
+   },
+   "secondary": null
+  },
+  {
+   "model": "meta/muse-spark-1.2",
+   "name": "Meta: Muse Spark 1.2",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.00000125,
+    "completion": 0.00000425,
+    "web_search": 0.0025,
+    "input_cache_read": 1.5e-7
+   },
+   "index": {
+    "value": 1292,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena: Muse Spark 1.2 (xHigh), IC ±14"
+   },
+   "secondary": null
+  },
+  {
+   "model": "meta/muse-spark-1.3",
+   "name": "Meta: Muse Spark 1.3",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.00000125,
+    "completion": 0.00000425,
+    "web_search": 0.0025,
+    "input_cache_read": 1.5e-7
+   },
+   "index": {
+    "value": 1290,
+    "scale": "Arena Vision",
+    "version": "snapshot 2026-11-06 (Score with CI; 167 models, 1,577,252 votes)",
+    "source": "https://arena.ai/leaderboard/vision",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Arena: Muse Spark 1.3 (Max)"
+   },
+   "secondary": null
+  }
+ ],
+ "shortfalls": []
+}

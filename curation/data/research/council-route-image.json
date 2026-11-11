@@ -1,0 +1,285 @@
+{
+ "options": [
+  "A",
+  "B"
+ ],
+ "counts": {
+  "A": 0,
+  "B": 11,
+  "X": 0
+ },
+ "weighted": {
+  "A": 0,
+  "B": 280.0341225109322,
+  "X": 0
+ },
+ "planned_weight": 336.333822689521,
+ "valid_weight": 280.0341225109322,
+ "quorum": {
+  "valid": 11,
+  "answered": 12,
+  "planned": 22,
+  "valid_weight": 280.0341225109322,
+  "answered_weight": 281.26533814922664,
+  "answered_weight_fraction": 0.9956225831224137,
+  "indexed_models": 5,
+  "ok": true
+ },
+ "discarded": {
+  "not_dispatched": 10,
+  "off_format": 1
+ },
+ "suspects": 0,
+ "weight_by_type": {
+  "published": 10,
+  "estimated": 0,
+  "floor": 1
+ },
+ "best_argument": {
+  "A": null,
+  "B": {
+   "model": "claude-opus-5-5",
+   "effort": "medium",
+   "reason": "Through the direct API the image goes in the message, identical for all jurors (like the Claude models), and each response carries usage.cost, which meets the cap measured by OpenRouter's cost."
+  },
+  "X": null
+ },
+ "scores_by_category": {
+  "A": {
+   "fidelity_to_request": 6.88,
+   "attachment_equality": 3.57,
+   "cost_measurement": 2.35,
+   "simplicity": 4.33
+  },
+  "B": {
+   "fidelity_to_request": 6.4,
+   "attachment_equality": 8.97,
+   "cost_measurement": 9.08,
+   "simplicity": 8.22
+  }
+ },
+ "table": [
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "minimal",
+   "status": "valid",
+   "vote": "B",
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": "high",
+   "reason": "Audio and video must already go through the direct API, so sending the image through the same route guarantees an identical attachment in the message for all jurors."
+  },
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "low",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "medium",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "high",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "xhigh",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "stealth/crouton-alpha",
+   "effort": "max",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 0.616,
+   "weight_type": "floor",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "effort": "low",
+   "status": "valid",
+   "vote": "B",
+   "weight": 13.62,
+   "weight_type": "published",
+   "confidence": "high",
+   "reason": "The direct API returns usage.cost and the per-session cost in OpenCode was not found, so only B measures the cap by the cost OpenRouter returns, with an identical base64 attachment for all jurors."
+  },
+  {
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "effort": "medium",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 13.62,
+   "weight_type": "published",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "effort": "high",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 13.62,
+   "weight_type": "published",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "effort": "none",
+   "status": "valid",
+   "vote": "B",
+   "weight": 11.759,
+   "weight_type": "published",
+   "confidence": "high",
+   "reason": "The direct API guarantees usage.cost per OpenRouter response, meeting the measured cost cap"
+  },
+  {
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "effort": "medium",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 11.759,
+   "weight_type": "published",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "effort": "high",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 11.759,
+   "weight_type": "published",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "effort": "high",
+   "status": "invalid: \"nothing\" with score 8 in B/fidelity_to_request; \"nothing\" with score 8 in B/attachment_equality; \"nothing\" with score 8 in B/cost_measurement",
+   "vote": null,
+   "weight": 1.231,
+   "weight_type": "estimated",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "effort": "max",
+   "status": "not dispatched: round closed",
+   "vote": null,
+   "weight": 1.231,
+   "weight_type": "estimated",
+   "confidence": null,
+   "reason": null
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "effort": "low",
+   "status": "valid",
+   "vote": "B",
+   "weight": 18.618,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "Through OpenCode, the image arrives as a tool result and the juror decides whether to open the file; the request requires an identical attachment for all jurors, and that is not guaranteed."
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "effort": "medium",
+   "status": "valid",
+   "vote": "B",
+   "weight": 24.601,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "Through the direct API, each response carries usage.cost, so the cost cap is measured by the value OpenRouter returns; through OpenCode the per-session cost was not found."
+  },
+  {
+   "model": "claude-haiku-5-5",
+   "effort": "high",
+   "status": "valid",
+   "vote": "B",
+   "weight": 29.874,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "Through OpenCode, the image arrives as a tool result that the juror decides whether to open, so it is not the same attachment as the Claude models get, which receive it in the message."
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "effort": "low",
+   "status": "valid",
+   "vote": "B",
+   "weight": 25.65,
+   "weight_type": "published",
+   "confidence": "high",
+   "reason": "Only the direct API delivers usage.cost per response, which the cost cap requires; in OpenCode the per-session cost was not found."
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "effort": "medium",
+   "status": "valid",
+   "vote": "B",
+   "weight": 30.82,
+   "weight_type": "published",
+   "confidence": "high",
+   "reason": "Only the direct API delivers the image in the user message, identical for all jurors, without depending on the agent deciding to open the read tool; OpenCode delivers it as a tool result."
+  },
+  {
+   "model": "claude-sonnet-5-5",
+   "effort": "high",
+   "status": "valid",
+   "vote": "B",
+   "weight": 41.515,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "The request requires an identical attachment for all jurors and a cost cap based on the cost OpenRouter returns. Only the direct API meets both: the image goes in the message, identical to the Claude models', and each response carries usage.cost."
+  },
+  {
+   "model": "claude-opus-5-5",
+   "effort": "low",
+   "status": "valid",
+   "vote": "B",
+   "weight": 34.753,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "Through the direct API the image goes in the message, as already happens with the 4 Claude models, and each response carries usage.cost, so the cap is measured by the cost OpenRouter returns."
+  },
+  {
+   "model": "claude-opus-5-5",
+   "effort": "medium",
+   "status": "valid",
+   "vote": "B",
+   "weight": 48.208,
+   "weight_type": "published",
+   "confidence": "medium",
+   "reason": "Through the direct API the image goes in the message, identical for all jurors (like the Claude models), and each response carries usage.cost, which meets the cap measured by OpenRouter's cost."
+  }
+ ],
+ "result": "decision",
+ "choice": "B"
+}

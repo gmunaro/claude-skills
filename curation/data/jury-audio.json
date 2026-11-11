@@ -1,0 +1,249 @@
+{
+ "category": "audio",
+ "built_at": "2026-11-08T01:07:47.904Z",
+ "benchmark": {
+  "name": "MMAU-Pro",
+  "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+  "source": "https://sonalkum.github.io/mmau-pro/results.json",
+  "queried_at": "2026-11-07T00:00:00Z",
+  "reason": "Broad audio understanding benchmark (speech, voice/prosody, sound, music; 5,305 items, 49 skills) with public per-model results and a Voice column (persona, prosody), the closest to judging acting. Big Bench Audio has no candidate (only realtime speech-to-speech); AIR-Bench stopped in 2024; VoiceBench measures following spoken instructions. Research: C:/tmp/curadoria/pesquisa-audio.md."
+ },
+ "catalog": {
+  "source": "https://openrouter.ai/api/v1/models",
+  "queried_at": "2026-11-08T01:07:47.904Z"
+ },
+ "effort": "medium",
+ "jury": [
+  {
+   "model": "google/gemini-3.1-pro-preview",
+   "name": "Google: Gemini 3.1 Pro Preview",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.000002,
+    "completion": 0.000012,
+    "image": 0.000002,
+    "audio": 0.000002,
+    "input_audio_cache": 2e-7,
+    "web_search": 0.014,
+    "internal_reasoning": 0.000012,
+    "input_cache_read": 2e-7,
+    "input_cache_write": 3.75e-7,
+    "overrides": 0
+   },
+   "index": {
+    "value": 72.2,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 88.9 / Voice 82.1; identity by name, no date"
+   },
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-3.7-flash",
+   "name": "Google: Gemini 3.7 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 7.5e-7,
+    "completion": 0.00000375,
+    "image": 7.5e-7,
+    "audio": 7.5e-7,
+    "input_audio_cache": 7.5e-8,
+    "web_search": 0.014,
+    "internal_reasoning": 0.00000375,
+    "input_cache_read": 7.5e-8,
+    "input_cache_write": 4.16666666666667e-8
+   },
+   "index": {
+    "value": 70.4,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 89.7 / Voice 87.9"
+   },
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-3.6-flash",
+   "name": "Google: Gemini 3.6 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 7.5e-7,
+    "completion": 0.00000375,
+    "image": 7.5e-7,
+    "audio": 7.5e-7,
+    "input_audio_cache": 7.5e-8,
+    "web_search": 0.014,
+    "internal_reasoning": 0.00000375,
+    "input_cache_read": 7.5e-8,
+    "input_cache_write": 4.16666666666667e-8
+   },
+   "index": {
+    "value": 69.6,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 86.6 / Voice 84.8"
+   },
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-3.5-flash",
+   "name": "Google: Gemini 3.5 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.0000015,
+    "completion": 0.000009,
+    "image": 0.0000015,
+    "audio": 0.000003,
+    "input_audio_cache": 3e-7,
+    "web_search": 0.014,
+    "internal_reasoning": 0.000009,
+    "input_cache_read": 1.5e-7,
+    "input_cache_write": 8.33333333333333e-8
+   },
+   "index": {
+    "value": 68.5,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 85.0 / Voice 73.8"
+   },
+   "secondary": null
+  },
+  {
+   "model": "google/gemini-2.5-flash",
+   "name": "Google: Gemini 2.5 Flash",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 3e-7,
+    "completion": 0.0000025,
+    "image": 3e-7,
+    "audio": 0.000001,
+    "input_audio_cache": 1e-7,
+    "web_search": 0.014,
+    "internal_reasoning": 0.0000025,
+    "input_cache_read": 3e-8,
+    "input_cache_write": 8.33333333333333e-8
+   },
+   "index": {
+    "value": 59.2,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 73.4 / Voice 71.7"
+   },
+   "secondary": null
+  },
+  {
+   "model": "openai/gpt-audio",
+   "name": "OpenAI: GPT Audio",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": null,
+   "effort_note": "no effort control",
+   "price": {
+    "prompt": 0.0000025,
+    "completion": 0.00001,
+    "audio": 0.000032,
+    "audio_output": 0.000064
+   },
+   "index": {
+    "value": 58.8,
+    "scale": "MMAU-Pro",
+    "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+    "source": "https://sonalkum.github.io/mmau-pro/results.json",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Speech 73.1 / Voice 49.3"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.8-omni-flash",
+   "name": "Qwen: Qwen3.8 Omni Flash",
+   "origin": "secondary_score (MMAU v1 (vendor report))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 1.5e-7,
+    "completion": 4.7e-7,
+    "input_cache_read": 1.6e-8
+   },
+   "index": null,
+   "secondary": {
+    "model": "qwen/qwen3.8-omni-flash",
+    "benchmark": "MMAU v1 (vendor report)",
+    "value": 81.8,
+    "source": "https://arxiv.org/html/2609.25611v1"
+   }
+  },
+  {
+   "model": "thinkingmachines/inkling",
+   "name": "Thinking Machines: Inkling",
+   "origin": "secondary_score (MMAU v1 (vendor report))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 0.000001,
+    "completion": 0.00000405,
+    "input_cache_read": 1.7e-7
+   },
+   "index": null,
+   "secondary": {
+    "model": "thinkingmachines/inkling",
+    "benchmark": "MMAU v1 (vendor report)",
+    "value": 77.2,
+    "source": "https://thinkingmachines.ai/model-card/inkling/"
+   }
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "name": "Google: Gemini 3.8 Flash",
+   "origin": "secondary_score (MMAU v1 (vendor report))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 8.25e-7,
+    "completion": 0.000004125,
+    "image": 8.25e-7,
+    "audio": 8.25e-7,
+    "input_audio_cache": 8.25e-8,
+    "web_search": 0.014,
+    "internal_reasoning": 0.000004125,
+    "input_cache_read": 8.25e-8,
+    "input_cache_write": 4.16666666666667e-8
+   },
+   "index": null,
+   "secondary": {
+    "model": "google/gemini-3.8-flash",
+    "benchmark": "MMAU v1 (vendor report)",
+    "value": 76.9,
+    "source": "https://arxiv.org/html/2609.25611v1"
+   }
+  }
+ ],
+ "shortfalls": []
+}

@@ -1,0 +1,219 @@
+{
+ "category": "video",
+ "built_at": "2026-11-08T01:13:49.406Z",
+ "benchmark": {
+  "name": "Video-MME-v2",
+  "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+  "source": "https://arxiv.org/html/2604.05015v1",
+  "queried_at": "2026-11-07T00:00:00Z",
+  "reason": "2026 version of Video-MME, measured by the authors under the same protocol for every model, with a metric that penalizes lucky guesses; no subtitles is the closest to a gameplay clip. Chosen by the quick council of 2026-11-07 (decision A, 95.8% of valid weight, 12 opinions; C:/tmp/curadoria/conselho-video/rodada1/decisao.json) over self-reported VideoMMMU via aggregators. Research: C:/tmp/curadoria/pesquisa-video.md."
+ },
+ "catalog": {
+  "source": "https://openrouter.ai/api/v1/models",
+  "queried_at": "2026-11-08T01:13:49.406Z"
+ },
+ "effort": "medium",
+ "jury": [
+  {
+   "model": "google/gemini-3-flash-preview",
+   "name": "Google: Gemini 3 Flash Preview",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 5e-7,
+    "completion": 0.000003,
+    "image": 5e-7,
+    "audio": 0.000001,
+    "input_audio_cache": 1e-7,
+    "web_search": 0.014,
+    "internal_reasoning": 0.000003,
+    "input_cache_read": 5e-8,
+    "input_cache_write": 8.33333333333333e-8
+   },
+   "index": {
+    "value": 32.9,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "paper: Gemini-3-Flash, 1 fps; id is the 2025-12-17 preview [identity by name]"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.5-397b-a17b",
+   "name": "Qwen: Qwen3.5 397B A17B",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 5e-7,
+    "completion": 0.0000036,
+    "input_cache_read": 3e-7
+   },
+   "index": {
+    "value": 30.3,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Think mode, 512 frames (Instruct: 16.9)"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.5-27b",
+   "name": "Qwen: Qwen3.5-27B",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 2.6e-7,
+    "completion": 0.0000026
+   },
+   "index": {
+    "value": 19.5,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Think mode, 512 frames"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.5-9b",
+   "name": "Qwen: Qwen3.5-9B",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 1.7e-7,
+    "completion": 2.5e-7
+   },
+   "index": {
+    "value": 19.5,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Think mode, 512 frames"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.5-122b-a10b",
+   "name": "Qwen: Qwen3.5-122B-A10B",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 2.6e-7,
+    "completion": 0.00000208
+   },
+   "index": {
+    "value": 16.3,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Think mode, 64 frames"
+   },
+   "secondary": null
+  },
+  {
+   "model": "qwen/qwen3.5-35b-a3b",
+   "name": "Qwen: Qwen3.5-35B-A3B",
+   "origin": "primary_score",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 1.4e-7,
+    "completion": 0.000001,
+    "input_cache_read": 5e-8
+   },
+   "index": {
+    "value": 15.6,
+    "scale": "Video-MME-v2",
+    "version": "arXiv 2604.05015v1, Table 1, Non-Lin Score, no subtitles (wo sub)",
+    "source": "https://arxiv.org/html/2604.05015v1",
+    "queried_at": "2026-11-07T00:00:00Z",
+    "note": "Think mode, 64 frames"
+   },
+   "secondary": null
+  },
+  {
+   "model": "minimax/minimax-m3",
+   "name": "MiniMax: MiniMax M3",
+   "origin": "secondary_score (VideoMMMU (self-reported, BenchLM))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 3e-7,
+    "completion": 0.0000012,
+    "input_cache_read": 6e-8
+   },
+   "index": null,
+   "secondary": {
+    "model": "minimax/minimax-m3",
+    "benchmark": "VideoMMMU (self-reported, BenchLM)",
+    "value": 84.6,
+    "source": "https://benchlm.ai"
+   }
+  },
+  {
+   "model": "qwen/qwen3.6-27b",
+   "name": "Qwen: Qwen3.6 27B",
+   "origin": "secondary_score (VideoMMMU (self-reported, BenchLM))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 3.2e-7,
+    "completion": 0.0000032
+   },
+   "index": null,
+   "secondary": {
+    "model": "qwen/qwen3.6-27b",
+    "benchmark": "VideoMMMU (self-reported, BenchLM)",
+    "value": 84.4,
+    "source": "https://benchlm.ai"
+   }
+  },
+  {
+   "model": "qwen/qwen3.6-plus",
+   "name": "Qwen: Qwen3.6 Plus",
+   "origin": "secondary_score (VideoMMMU (self-reported, BenchLM))",
+   "proxy": null,
+   "effort": "medium",
+   "effort_note": "medium requested (reasoning.effort)",
+   "price": {
+    "prompt": 3.25e-7,
+    "completion": 0.00000195,
+    "input_cache_write": 4.0625e-7,
+    "overrides": 0
+   },
+   "index": null,
+   "secondary": {
+    "model": "qwen/qwen3.6-plus",
+    "benchmark": "VideoMMMU (self-reported, BenchLM)",
+    "value": 84,
+    "source": "https://benchlm.ai"
+   }
+  }
+ ],
+ "shortfalls": [],
+ "excluded_by_identity": [
+  "Qwen3.8 Max (VideoMMMU 88.7): -0902 or -prime, identity not proven",
+  "gemini-3.1-flash-lite (VideoMMMU 84.8, llmboard): GA or preview not stated"
+ ],
+ "shortfall": "Only 6 of the 76 candidates with video have a Video-MME-v2 score, all released by Feb 2026; the newer ones (gemini-3.7/3.8-flash, gemini-4-argon, kimi-k3, qwen3.8-omni, mimo-v2.6) have no score in any verified source and stay out. The 3 remaining seats use self-reported VideoMMMU (BenchLM), with floor weight."
+}

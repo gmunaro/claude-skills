@@ -1,0 +1,136 @@
+{
+ "category": "audio",
+ "built_at": "2026-11-08T03:57:06.482Z",
+ "subtypes": {
+  "music": {
+   "category": "music",
+   "state": "ok",
+   "reason": null,
+   "built_at": "2026-11-08T03:57:06.482Z",
+   "catalog": {
+    "source": "https://openrouter.ai/api/v1/models",
+    "queried_at": "2026-11-08T03:57:06.482Z"
+   },
+   "benchmark": {
+    "name": "Artificial Analysis Music Arena (Elo)",
+    "version": "AA-Music-Instrumental v1.1 e AA-Music-Vocal v1.1",
+    "source": "https://artificialanalysis.ai/music/leaderboard/instrumental ; https://artificialanalysis.ai/music/leaderboard/vocals",
+    "queried_at": "2026-11-07"
+   },
+   "identity_checked": {
+    "checked": true,
+    "source": "benchmark name compared to the name from /models?output_modalities=all (live catalog)",
+    "date": "2026-11-08"
+   },
+   "top": [
+    {
+     "model": "google/lyria-3-pro-preview",
+     "name": "Lyria 3 Pro",
+     "position": 1,
+     "score": {
+      "instrumental": 1080,
+      "vocal": 1048
+     },
+     "benchmark": "Artificial Analysis Music Arena (Elo)",
+     "benchmark_version": "AA-Music-Instrumental v1.1 e AA-Music-Vocal v1.1",
+     "source": "https://artificialanalysis.ai/music/leaderboard/instrumental (rank 5); https://artificialanalysis.ai/music/leaderboard/vocals (rank 6); https://openrouter.ai/google/lyria-3-pro-preview",
+     "date": "2026-11-07",
+     "price": {
+      "unit": "track",
+      "usd": 0.08,
+      "origin": "ranking: per-track price",
+      "detail": "$0.08 per full song (OpenRouter: 'Google AI Studio: $0.08/song', no markup)"
+     },
+     "limits": [
+      "Pro: ~104 s (104–105 s for an 8-bar request), no duration control",
+      "audio.format wav returns an empty stream; use the default mp3",
+      "no native loop, and no guarantee of BPM or of a melody given as notes"
+     ],
+     "capabilities": {
+      "max_duration_s": null
+     },
+     "note": "Assumed identity, [unverified]: AA 'Lyria 3 Pro' is treated as the same model as OpenRouter's 'lyria-3-pro-preview', with no confirmation on the AA model page. Maximum duration not documented on the OpenRouter page [unverified]. measured_usd from custos.jsonl (rows lyria_pro_a and lyria_pro_b, usage.cost). Failed calls are not charged (OpenRouter)."
+    }
+   ],
+   "entered": [],
+   "left": [],
+   "absent_from_catalog": [],
+   "no_estimate": []
+  },
+  "speech": {
+   "category": "speech",
+   "state": "judging_only",
+   "reason": "no_verified_route",
+   "built_at": "2026-11-08T03:57:06.482Z",
+   "catalog": {
+    "source": "https://openrouter.ai/api/v1/models",
+    "queried_at": "2026-11-08T03:57:06.482Z"
+   },
+   "benchmark": {
+    "name": "Artificial Analysis Text-to-Speech Arena, Provider Voice leaderboard (Elo)",
+    "version": "Speech Arena, Provider Voice (no date on the page; most recent release cited in Nov 2026)",
+    "source": "https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice",
+    "queried_at": "2026-11-07"
+   },
+   "identity_checked": {
+    "checked": true,
+    "source": "benchmark name compared to the name from /models?output_modalities=all (live catalog)",
+    "date": "2026-11-08"
+   },
+   "top": [
+    {
+     "model": "elevenlabs/eleven-v4",
+     "name": "Eleven v4",
+     "position": 1,
+     "score": 1339,
+     "benchmark": "Artificial Analysis Text-to-Speech Arena, Provider Voice leaderboard (Elo)",
+     "benchmark_version": "Speech Arena, Provider Voice (no date on the page; most recent release cited in Nov 2026)",
+     "source": "https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice (rank 1); https://openrouter.ai/api/v1/models",
+     "date": "2026-11-07",
+     "price": {
+      "unit": "character",
+      "usd": 0.00008,
+      "origin": "ranking: per-character price",
+      "detail": "$0.00008 per input character, from the API model list ($80 per 1M characters)"
+     },
+     "limits": [],
+     "capabilities": {
+      "max_duration_s": null
+     },
+     "note": "Identity by name, version not confirmed on the model page [unverified]. 2,674 samples on AA. Maximum duration not documented [unverified]."
+    },
+    {
+     "model": "elevenlabs/eleven-v4-turbo",
+     "name": "Eleven v4 Turbo",
+     "position": 2,
+     "score": 1335,
+     "benchmark": "Artificial Analysis Text-to-Speech Arena, Provider Voice leaderboard (Elo)",
+     "benchmark_version": "Speech Arena, Provider Voice (no date on the page; most recent release cited in Nov 2026)",
+     "source": "https://artificialanalysis.ai/text-to-speech/leaderboard/provider-voice (rank 2); https://openrouter.ai/api/v1/models",
+     "date": "2026-11-07",
+     "price": {
+      "unit": "character",
+      "usd": 0.00004,
+      "origin": "ranking: per-character price",
+      "detail": "$0.00004 per input character, from the API model list ($40 per 1M characters)"
+     },
+     "limits": [],
+     "capabilities": {
+      "max_duration_s": null
+     },
+     "note": "Identity by name, [unverified] on the model page. Maximum duration not documented [unverified]."
+    }
+   ],
+   "entered": [],
+   "left": [],
+   "absent_from_catalog": [],
+   "no_estimate": [
+    {
+     "model": "google/gemini-3.8-flash-tts",
+     "position": 3,
+     "reason": "no price per character convertible to USD: Per token: $0.0000005 input and $0.000009 output (API list). Charged per token, not per character; the AA price column ($16.49 per 1M characters) uses a different unit and should not be compared."
+    }
+   ]
+  }
+ }
+}

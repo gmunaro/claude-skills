@@ -1,0 +1,68 @@
+{
+ "benchmark": {
+  "name": "MMAU-Pro",
+  "version": "public results.json (arXiv 2508.13992 v1; no date per row)",
+  "source": "https://sonalkum.github.io/mmau-pro/results.json",
+  "queried_at": "2026-11-07T00:00:00Z",
+  "reason": "Broad audio understanding benchmark (speech, voice/prosody, sound, music; 5,305 items, 49 skills) with public per-model results and a Voice column (persona, prosody), the closest to judging acting. Big Bench Audio has no candidate (only realtime speech-to-speech); AIR-Bench stopped in 2024; VoiceBench measures following spoken instructions. Research: C:/tmp/curadoria/pesquisa-audio.md."
+ },
+ "models": [
+  {
+   "model": "google/gemini-3.1-pro-preview",
+   "value": 72.2,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 88.9 / Voice 82.1; identity by name, no date"
+  },
+  {
+   "model": "google/gemini-3.7-flash",
+   "value": 70.4,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 89.7 / Voice 87.9"
+  },
+  {
+   "model": "google/gemini-3.6-flash",
+   "value": 69.6,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 86.6 / Voice 84.8"
+  },
+  {
+   "model": "google/gemini-3.5-flash",
+   "value": 68.5,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 85.0 / Voice 73.8"
+  },
+  {
+   "model": "google/gemini-2.5-flash",
+   "value": 59.2,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 73.4 / Voice 71.7"
+  },
+  {
+   "model": "openai/gpt-audio",
+   "value": 58.8,
+   "source": "https://sonalkum.github.io/mmau-pro/results.json",
+   "note": "Speech 73.1 / Voice 49.3"
+  }
+ ],
+ "secondaries": [
+  {
+   "model": "qwen/qwen3.8-omni-flash",
+   "benchmark": "MMAU v1 (vendor report)",
+   "value": 81.8,
+   "source": "https://arxiv.org/html/2609.25611v1"
+  },
+  {
+   "model": "thinkingmachines/inkling",
+   "benchmark": "MMAU v1 (vendor report)",
+   "value": 77.2,
+   "source": "https://thinkingmachines.ai/model-card/inkling/"
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "benchmark": "MMAU v1 (vendor report)",
+   "value": 76.9,
+   "source": "https://arxiv.org/html/2609.25611v1"
+  }
+ ],
+ "shortfall": "Only 6 of the 30 candidates with audio have an MMAU-Pro score; the 3 remaining seats go to the 3 with MMAU v1 published by the vendor, with floor weight (MMAU v1 is not the MMAU-Pro scale and there are not 5 anchors to calibrate)."
+}

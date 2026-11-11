@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-label="How swarm routes a task: classify it into one of 16 types, send it to the conductor, a Haiku worker, a worker sized by difficulty, or the council; an oracle checks the result; on failure climb the ladder one step at a time">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#6e7681"/>
+    </marker>
+  </defs>
+  <rect width="960" height="760" rx="20" fill="#0d1117"/>
+  <g font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+    <text x="40" y="50" font-size="22" font-weight="700" fill="#e6edf3">swarm: where does this task go?</text>
+
+    <!-- 1 task -->
+    <rect x="380" y="78" width="200" height="50" rx="25" fill="#161b22" stroke="#6e7681" stroke-width="1.5"/>
+    <text x="480" y="110" text-anchor="middle" font-size="18" font-weight="600" fill="#e6edf3">New task</text>
+    <path d="M480 128V152" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+
+    <!-- 2 classify -->
+    <rect x="300" y="156" width="360" height="62" rx="12" fill="#1c1535" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="480" y="183" text-anchor="middle" font-size="18" font-weight="700" fill="#e6edf3">Classify it with the routing table</text>
+    <text x="480" y="205" text-anchor="middle" font-size="15" fill="#c4b5fd">16 task types → model, effort, method</text>
+
+    <!-- fan out -->
+    <path d="M480 218V242M145 242H815" stroke="#6e7681" stroke-width="2" fill="none"/>
+    <path d="M145 242V266" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M368 242V266" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M592 242V266" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M815 242V266" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+
+    <!-- 3 lanes -->
+    <g>
+      <rect x="40" y="270" width="210" height="150" rx="12" fill="#1c1535" stroke="#a78bfa" stroke-width="1.5"/>
+      <text x="58" y="300" font-size="17" font-weight="700" fill="#c4b5fd">Conductor does it</text>
+      <text x="58" y="328" font-size="15" fill="#e6edf3">One-off lookup,</text>
+      <text x="58" y="349" font-size="15" fill="#e6edf3">plan, prose</text>
+      <text x="58" y="400" font-size="14" fill="#9da7b3">no subagent</text>
+
+      <rect x="263" y="270" width="210" height="150" rx="12" fill="#0c2622" stroke="#2dd4bf" stroke-width="1.5"/>
+      <text x="281" y="300" font-size="17" font-weight="700" fill="#5eead4">Haiku worker</text>
+      <text x="281" y="328" font-size="15" fill="#e6edf3">Repo sweeps, web</text>
+      <text x="281" y="349" font-size="15" fill="#e6edf3">research, running checks</text>
+      <text x="281" y="400" font-size="14" fill="#9da7b3">medium effort</text>
+
+      <rect x="487" y="270" width="210" height="150" rx="12" fill="#2a2008" stroke="#fbbf24" stroke-width="1.5"/>
+      <text x="505" y="300" font-size="17" font-weight="700" fill="#fcd34d">Sized by difficulty</text>
+      <text x="505" y="328" font-size="15" fill="#e6edf3">Scoped code change</text>
+      <text x="505" y="349" font-size="15" fill="#e6edf3">with a test that proves it</text>
+      <text x="505" y="379" font-size="14" fill="#9da7b3">Haiku → Sonnet → Opus,</text>
+      <text x="505" y="400" font-size="14" fill="#9da7b3">each in its own worktree</text>
+
+      <rect x="710" y="270" width="210" height="150" rx="12" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="728" y="300" font-size="17" font-weight="700" fill="#7dd3fc">council</text>
+      <text x="728" y="328" font-size="15" fill="#e6edf3">A choice between 2–4</text>
+      <text x="728" y="349" font-size="15" fill="#e6edf3">options no test can decide</text>
+      <text x="728" y="400" font-size="14" fill="#9da7b3">see the council diagram</text>
+    </g>
+
+    <!-- 4 oracle -->
+    <path d="M368 420V462" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M592 420V462" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <rect x="200" y="466" width="560" height="66" rx="12" fill="#161b22" stroke="#e6edf3" stroke-width="1.5"/>
+    <text x="480" y="494" text-anchor="middle" font-size="18" font-weight="700" fill="#e6edf3">Oracle checks the result</text>
+    <text x="480" y="517" text-anchor="middle" font-size="15" fill="#9da7b3">a test, a typecheck or a command's output, never the worker's word</text>
+
+    <!-- 5 outcomes -->
+    <path d="M368 532V576" stroke="#3fb950" stroke-width="2" marker-end="url(#a)"/>
+    <text x="380" y="560" font-size="15" font-weight="600" fill="#3fb950">passes</text>
+    <rect x="263" y="580" width="210" height="56" rx="28" fill="#0f2417" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="368" y="614" text-anchor="middle" font-size="18" font-weight="700" fill="#56d364">Done</text>
+
+    <path d="M592 532V576" stroke="#f85149" stroke-width="2" marker-end="url(#a)"/>
+    <text x="604" y="560" font-size="15" font-weight="600" fill="#f85149">fails</text>
+    <rect x="487" y="580" width="433" height="148" rx="12" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <text x="505" y="610" font-size="17" font-weight="700" fill="#ff7b72">Ladder: climb one step, then retry</text>
+    <text x="505" y="638" font-size="15" fill="#e6edf3">1  Fix the prompt</text>
+    <text x="505" y="660" font-size="15" fill="#e6edf3">2  Raise the effort</text>
+    <text x="505" y="682" font-size="15" fill="#e6edf3">3  Split the task</text>
+    <text x="700" y="638" font-size="15" fill="#e6edf3">4  Raise the model</text>
+    <text x="700" y="660" font-size="15" fill="#e6edf3">5  Conductor does it</text>
+    <text x="505" y="712" font-size="14" fill="#9da7b3">Always in this order. The cheap fix comes first.</text>
+
+    <!-- retry loop -->
+    <path d="M820 580V443H660V426" stroke="#f85149" stroke-width="2" fill="none" stroke-dasharray="5 5" marker-end="url(#a)"/>
+    <text x="830" y="516" font-size="15" font-weight="600" fill="#f85149">retry</text>
+  </g>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 800" role="img" aria-label="How council decides: one packet goes to every juror, jurors answer in parallel and alone, each valid vote is weighted by the model's Intelligence Index, a quorum check runs, and the result is a decision, a missing fact, a divergence or insufficient">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#6e7681"/>
+    </marker>
+  </defs>
+  <rect width="960" height="800" rx="20" fill="#0d1117"/>
+  <g font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+    <text x="40" y="50" font-size="22" font-weight="700" fill="#e6edf3">council: which of these 2–4 options?</text>
+
+    <!-- step rail -->
+    <path d="M70 108V560" stroke="#30363d" stroke-width="2"/>
+
+    <!-- 1 -->
+    <circle cx="70" cy="118" r="20" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="124" text-anchor="middle" font-size="18" font-weight="700" fill="#7dd3fc">1</text>
+    <rect x="112" y="80" width="808" height="80" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="134" y="112" font-size="18" font-weight="700" fill="#e6edf3">Build one packet</text>
+    <text x="134" y="138" font-size="15" fill="#c9d1d9">The question, the options and the evidence. One copy per option order, so no option wins by being first.</text>
+
+    <!-- 2 -->
+    <circle cx="70" cy="236" r="20" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="242" text-anchor="middle" font-size="18" font-weight="700" fill="#7dd3fc">2</text>
+    <rect x="112" y="178" width="808" height="118" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="134" y="210" font-size="18" font-weight="700" fill="#e6edf3">Jurors answer in parallel, each one alone</text>
+    <text x="134" y="236" font-size="15" fill="#c9d1d9">Same packet for everyone. Nobody sees another juror's answer or the conductor's preference.</text>
+    <g stroke-width="1.5" fill-opacity="0.25">
+      <g fill="#9da7b3" stroke="#9da7b3"><circle cx="146" cy="268" r="11"/><circle cx="176" cy="268" r="11"/><circle cx="206" cy="268" r="11"/><circle cx="236" cy="268" r="11"/></g>
+      <g fill="#2dd4bf" stroke="#2dd4bf"><circle cx="390" cy="268" r="11"/><circle cx="420" cy="268" r="11"/><circle cx="450" cy="268" r="11"/></g>
+      <g fill="#fbbf24" stroke="#fbbf24"><circle cx="560" cy="268" r="11"/><circle cx="590" cy="268" r="11"/><circle cx="620" cy="268" r="11"/></g>
+      <g fill="#fb7185" stroke="#fb7185"><circle cx="740" cy="268" r="11"/><circle cx="770" cy="268" r="11"/></g>
+    </g>
+    <text x="256" y="273" font-size="14" fill="#9da7b3">free models</text>
+    <text x="470" y="273" font-size="14" fill="#5eead4">Haiku</text>
+    <text x="640" y="273" font-size="14" fill="#fcd34d">Sonnet</text>
+    <text x="790" y="273" font-size="14" fill="#fda4af">Opus</text>
+
+    <!-- 3 -->
+    <circle cx="70" cy="368" r="20" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="374" text-anchor="middle" font-size="18" font-weight="700" fill="#7dd3fc">3</text>
+    <rect x="112" y="314" width="808" height="108" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="134" y="346" font-size="18" font-weight="700" fill="#e6edf3">Weight each valid vote</text>
+    <text x="134" y="372" font-size="15" fill="#c9d1d9">A vote weighs the model's published Intelligence Index (Artificial Analysis).</text>
+    <text x="134" y="396" font-size="15" fill="#c9d1d9">No reply, timeout or wrong format: the vote is left out. It is never counted as a zero.</text>
+    <g stroke-width="1.5" fill-opacity="0.25">
+      <circle cx="742" cy="368" r="7" fill="#9da7b3" stroke="#9da7b3"/>
+      <circle cx="772" cy="368" r="12" fill="#2dd4bf" stroke="#2dd4bf"/>
+      <circle cx="814" cy="368" r="18" fill="#fbbf24" stroke="#fbbf24"/>
+      <circle cx="872" cy="368" r="26" fill="#fb7185" stroke="#fb7185"/>
+    </g>
+
+    <!-- 4 -->
+    <circle cx="70" cy="494" r="20" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="70" y="500" text-anchor="middle" font-size="18" font-weight="700" fill="#7dd3fc">4</text>
+    <rect x="112" y="440" width="808" height="108" rx="12" fill="#0a2233" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="134" y="472" font-size="18" font-weight="700" fill="#e6edf3">Check the quorum, then count</text>
+    <text x="134" y="498" font-size="15" fill="#c9d1d9">Quorum = at least 2 different models with a published index among the valid votes,</text>
+    <text x="134" y="522" font-size="15" fill="#c9d1d9">and valid weight of at least 2/3 of the weight of everyone who responded.</text>
+
+    <!-- outcomes -->
+    <path d="M516 548V574M145 574H815" stroke="#6e7681" stroke-width="2" fill="none"/>
+    <path d="M145 574V598" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M368 574V598" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M592 574V598" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+    <path d="M815 574V598" stroke="#6e7681" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="40" y="602" width="210" height="166" rx="12" fill="#0f2417" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="58" y="634" font-size="18" font-weight="700" fill="#56d364">decision</text>
+    <text x="58" y="662" font-size="15" fill="#e6edf3">One option holds at</text>
+    <text x="58" y="683" font-size="15" fill="#e6edf3">least 2/3 of the weight.</text>
+    <text x="58" y="725" font-size="14" fill="#9da7b3">The agent goes ahead</text>
+    <text x="58" y="745" font-size="14" fill="#9da7b3">without asking.</text>
+
+    <rect x="263" y="602" width="210" height="166" rx="12" fill="#2a2008" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="281" y="634" font-size="18" font-weight="700" fill="#fcd34d">missing fact</text>
+    <text x="281" y="662" font-size="15" fill="#e6edf3">"Can't tell" holds at</text>
+    <text x="281" y="683" font-size="15" fill="#e6edf3">least 1/3 of the weight.</text>
+    <text x="281" y="725" font-size="14" fill="#9da7b3">Fetch the fact, run</text>
+    <text x="281" y="745" font-size="14" fill="#9da7b3">again, once.</text>
+
+    <rect x="487" y="602" width="210" height="166" rx="12" fill="#1c1535" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="505" y="634" font-size="18" font-weight="700" fill="#c4b5fd">divergence</text>
+    <text x="505" y="662" font-size="15" fill="#e6edf3">Quorum holds, but no</text>
+    <text x="505" y="683" font-size="15" fill="#e6edf3">option reaches 2/3.</text>
+    <text x="505" y="725" font-size="14" fill="#9da7b3">Ask the owner, with the</text>
+    <text x="505" y="745" font-size="14" fill="#9da7b3">best argument per side.</text>
+
+    <rect x="710" y="602" width="210" height="166" rx="12" fill="#161b22" stroke="#6e7681" stroke-width="1.5"/>
+    <text x="728" y="634" font-size="18" font-weight="700" fill="#c9d1d9">insufficient</text>
+    <text x="728" y="662" font-size="15" fill="#e6edf3">No quorum.</text>
+    <text x="728" y="725" font-size="14" fill="#9da7b3">Report how many votes</text>
+    <text x="728" y="745" font-size="14" fill="#9da7b3">came in, and why.</text>
+  </g>
+</svg>

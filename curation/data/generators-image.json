@@ -1,0 +1,132 @@
+{
+ "category": "image",
+ "state": "ok",
+ "reason": null,
+ "built_at": "2026-11-08T03:57:05.796Z",
+ "catalog": {
+  "source": "https://openrouter.ai/api/v1/models",
+  "queried_at": "2026-11-08T03:57:05.796Z"
+ },
+ "benchmark": {
+  "name": "Arena Text-to-Image (overall ranking)",
+  "version": "Page snapshot on 2026-11-06 ('Nov 6, 2026'; 7,016,263 votes; 84 models). No version number on the page.",
+  "source": "https://arena.ai/leaderboard/text-to-image",
+  "queried_at": "2026-11-07"
+ },
+ "identity_checked": {
+  "checked": true,
+  "source": "benchmark name compared to the name from /models?output_modalities=all (live catalog)",
+  "date": "2026-11-08"
+ },
+ "top": [
+  {
+   "model": "openai/gpt-image-2.5-sunburst",
+   "name": "OpenAI: GPT Image 2.5 Sunburst",
+   "position": 1,
+   "score": 1429,
+   "secondary_score": 1517,
+   "benchmark": "Arena Text-to-Image (overall ranking)",
+   "benchmark_version": "Page snapshot on 2026-11-06 ('Nov 6, 2026'; 7,016,263 votes; 84 models). No version number on the page.",
+   "source": "https://arena.ai/leaderboard/text-to-image; https://arena.ai/leaderboard/image-edit",
+   "date": "2026-11-07",
+   "price": {
+    "unit": "image",
+    "usd": 0.025132,
+    "origin": "measured in real calls (largest of 2: oraculos/crowmother/g2/candidatos.json, 2026-11-08)",
+    "detail": "pricing.image_output=0.00003 USD/token (API https://openrouter.ai/api/v1/models?output_modalities=image) x 1120 tokens/image (measured on Gemini 1K in custos.jsonl). Not verified for this model: the real token count may differ.",
+    "catalog_estimate_usd": 0.0336,
+    "measured": [
+     {
+      "usd": 0.023237,
+      "file": "oraculos/crowmother/g1/candidatos.json",
+      "date": "2026-11-08"
+     },
+     {
+      "usd": 0.025132,
+      "file": "oraculos/crowmother/g2/candidatos.json",
+      "date": "2026-11-08"
+     }
+    ]
+   },
+   "limits": [],
+   "capabilities": {
+    "accepts_reference": true
+   },
+   "note": "Identical name. Marked preliminary in both lists. Preliminary Arena score."
+  },
+  {
+   "model": "openai/gpt-image-2.6-sunburst",
+   "name": "OpenAI: GPT Image 2.6 Sunburst",
+   "position": 2,
+   "score": 1409,
+   "secondary_score": 1476,
+   "benchmark": "Arena Text-to-Image (overall ranking)",
+   "benchmark_version": "Page snapshot on 2026-11-06 ('Nov 6, 2026'; 7,016,263 votes; 84 models). No version number on the page.",
+   "source": "https://arena.ai/leaderboard/text-to-image; https://arena.ai/leaderboard/image-edit",
+   "date": "2026-11-07",
+   "price": {
+    "unit": "image",
+    "usd": 0.064642,
+    "origin": "measured in real calls (largest of 2: oraculos/crowmother/g2/candidatos.json, 2026-11-08)",
+    "detail": "pricing.image_output=0.00003 USD/token (API https://openrouter.ai/api/v1/models?output_modalities=image) x 1120 tokens/image (measured on Gemini 1K in custos.jsonl). Not verified for this model: the real token count may differ.",
+    "catalog_estimate_usd": 0.0336,
+    "measured": [
+     {
+      "usd": 0.062747,
+      "file": "oraculos/crowmother/g1/candidatos.json",
+      "date": "2026-11-08"
+     },
+     {
+      "usd": 0.064642,
+      "file": "oraculos/crowmother/g2/candidatos.json",
+      "date": "2026-11-08"
+     }
+    ]
+   },
+   "limits": [],
+   "capabilities": {
+    "accepts_reference": true
+   },
+   "note": "Arena measures the Medium variant; the OR id does not state quality. Preliminary; 2,972 votes in the text. Preliminary Arena score."
+  },
+  {
+   "model": "openai/gpt-image-2.5-flare",
+   "name": "OpenAI: GPT Image 2.5 Flare",
+   "position": 3,
+   "score": 1402,
+   "secondary_score": 1483,
+   "benchmark": "Arena Text-to-Image (overall ranking)",
+   "benchmark_version": "Page snapshot on 2026-11-06 ('Nov 6, 2026'; 7,016,263 votes; 84 models). No version number on the page.",
+   "source": "https://arena.ai/leaderboard/text-to-image; https://arena.ai/leaderboard/image-edit",
+   "date": "2026-11-07",
+   "price": {
+    "unit": "image",
+    "usd": 0.064642,
+    "origin": "measured in real calls (largest of 2: oraculos/crowmother/g2/candidatos.json, 2026-11-08)",
+    "detail": "pricing.image_output=0.00003 USD/token (API https://openrouter.ai/api/v1/models?output_modalities=image) x 1120 tokens/image (measured on Gemini 1K in custos.jsonl). Not verified for this model: the real token count may differ.",
+    "catalog_estimate_usd": 0.0336,
+    "measured": [
+     {
+      "usd": 0.023237,
+      "file": "oraculos/crowmother/g1/candidatos.json",
+      "date": "2026-11-08"
+     },
+     {
+      "usd": 0.064642,
+      "file": "oraculos/crowmother/g2/candidatos.json",
+      "date": "2026-11-08"
+     }
+    ]
+   },
+   "limits": [],
+   "capabilities": {
+    "accepts_reference": true
+   },
+   "note": "Identical name. Marked preliminary in both lists. Preliminary Arena score."
+  }
+ ],
+ "entered": [],
+ "left": [],
+ "absent_from_catalog": [],
+ "no_estimate": []
+}

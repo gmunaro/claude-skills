@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-label="swarm routes each task to the cheapest model that can do it; council lets a weighted panel of models decide when no test can">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b2e"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <polygon id="hex" points="0,-17 14.7,-8.5 14.7,8.5 0,17 -14.7,8.5 -14.7,-8.5"/>
+  </defs>
+  <rect width="960" height="340" rx="20" fill="url(#bg)"/>
+  <circle cx="150" cy="150" r="170" fill="url(#glowL)"/>
+  <circle cx="815" cy="150" r="170" fill="url(#glowR)"/>
+
+  <!-- swarm: a honeycomb of workers, most of them cheap -->
+  <g transform="translate(150 138)" stroke-width="2" fill-opacity="0.18">
+    <use href="#hex" x="0" y="0" fill="#a78bfa" stroke="#a78bfa" fill-opacity="0.45"/>
+    <g fill="#2dd4bf" stroke="#2dd4bf">
+      <use href="#hex" x="32" y="0"/><use href="#hex" x="-32" y="0"/>
+      <use href="#hex" x="16" y="-28"/><use href="#hex" x="-16" y="28"/>
+      <use href="#hex" x="64" y="0"/><use href="#hex" x="-64" y="0"/>
+      <use href="#hex" x="48" y="28"/><use href="#hex" x="-48" y="-28"/>
+      <use href="#hex" x="0" y="-56"/><use href="#hex" x="0" y="56"/>
+      <use href="#hex" x="32" y="56"/><use href="#hex" x="-32" y="-56"/>
+      <use href="#hex" x="80" y="-28"/><use href="#hex" x="-80" y="28"/>
+      <use href="#hex" x="96" y="0"/><use href="#hex" x="-96" y="0"/>
+    </g>
+    <g fill="#fbbf24" stroke="#fbbf24">
+      <use href="#hex" x="-16" y="-28"/><use href="#hex" x="16" y="28"/><use href="#hex" x="48" y="-28"/>
+    </g>
+    <use href="#hex" x="-48" y="28" fill="#fb7185" stroke="#fb7185" fill-opacity="0.3"/>
+  </g>
+
+  <!-- council: jurors around a table, vote weight = circle size -->
+  <g transform="translate(815 138)">
+    <circle r="46" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="4 6"/>
+    <text y="7" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#38bdf8">2/3</text>
+    <g stroke-width="2">
+      <circle cx="0" cy="-84" r="17" fill="#fb7185" fill-opacity="0.3" stroke="#fb7185"/>
+      <circle cx="42" cy="-73" r="15" fill="#fb7185" fill-opacity="0.3" stroke="#fb7185"/>
+      <circle cx="73" cy="-42" r="13" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24"/>
+      <circle cx="84" cy="0" r="12" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24"/>
+      <circle cx="73" cy="42" r="11" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24"/>
+      <circle cx="42" cy="73" r="9" fill="#2dd4bf" fill-opacity="0.25" stroke="#2dd4bf"/>
+      <circle cx="0" cy="84" r="8" fill="#2dd4bf" fill-opacity="0.25" stroke="#2dd4bf"/>
+      <circle cx="-42" cy="73" r="8" fill="#2dd4bf" fill-opacity="0.25" stroke="#2dd4bf"/>
+      <circle cx="-73" cy="42" r="7" fill="#9da7b3" fill-opacity="0.25" stroke="#9da7b3"/>
+      <circle cx="-84" cy="0" r="6" fill="#9da7b3" fill-opacity="0.25" stroke="#9da7b3"/>
+      <circle cx="-73" cy="-42" r="6" fill="#9da7b3" fill-opacity="0.25" stroke="#9da7b3"/>
+      <circle cx="-42" cy="-73" r="5" fill="#9da7b3" fill-opacity="0.25" stroke="#9da7b3"/>
+    </g>
+  </g>
+
+  <g font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" text-anchor="middle">
+    <text x="480" y="128" font-size="40" font-weight="800" fill="#e6edf3">swarm <tspan fill="#6e7681" font-weight="400">+</tspan> council</text>
+    <text x="480" y="166" font-size="19" fill="#9da7b3">two Claude Code skills</text>
+    <text x="150" y="282" font-size="20" font-weight="700" fill="#2dd4bf">swarm</text>
+    <text x="150" y="308" font-size="16" fill="#c9d1d9">cheapest model that can do the job</text>
+    <text x="790" y="282" font-size="20" font-weight="700" fill="#38bdf8">council</text>
+    <text x="790" y="308" font-size="16" fill="#c9d1d9">a weighted panel decides when no test can</text>
+  </g>
+</svg>
